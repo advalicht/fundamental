@@ -249,7 +249,7 @@
   border: none
 }
 .fd-badge--filled.fd-badge--success {
-  background-color: rgba(53,156,70,.07)
+  background-color: rgba(17,136,67,.07)
 }
 .fd-badge--filled.fd-badge--warning {
   background-color: rgba(245,149,24,.07)
@@ -258,7 +258,7 @@
   background-color: rgba(238,0,0,.07)
 }
 .fd-badge--success {
-  color: #359c46
+  color: #118843
 }
 .fd-badge--warning {
   color: #f59518
@@ -370,14 +370,14 @@
   color: #0a6ed1
 }
 .fd-button--positive {
-  color: #359c46;
-  border-color: #359c46
+  color: #118843;
+  border-color: #118843
 }
 .fd-button--positive:hover {
-  border-color: #2c813a;
-  color: #2c813a;
-  -webkit-box-shadow: 0 0 0 1px #359c46;
-  box-shadow: 0 0 0 1px #359c46
+  border-color: #0d6833;
+  color: #0d6833;
+  -webkit-box-shadow: 0 0 0 1px #118843;
+  box-shadow: 0 0 0 1px #118843
 }
 .fd-button--positive.is-active,
 .fd-button--positive.is-pressed,
@@ -385,15 +385,15 @@
 .fd-button--positive:active,
 .fd-button--positive[aria-pressed=true],
 .fd-button--positive[aria-selected=true] {
-  background-color: #287635;
-  border-color: #287635;
+  background-color: #0b5b2d;
+  border-color: #0b5b2d;
   color: #fff
 }
 .fd-button--positive.is-disabled,
 .fd-button--positive:disabled,
 .fd-button--positive[aria-disabled=true] {
   background-color: #fff;
-  color: #359c46
+  color: #118843
 }
 .fd-button--negative {
   color: #e00;
@@ -461,13 +461,13 @@
 }
 .fd-button--action-bar.fd-button--positive,
 .fd-button--main.fd-button--positive {
-  background-color: #359c46;
-  border-color: #359c46
+  background-color: #118843;
+  border-color: #118843
 }
 .fd-button--action-bar.fd-button--positive:hover,
 .fd-button--main.fd-button--positive:hover {
-  background-color: #2c813a;
-  border-color: #2c813a;
+  background-color: #0d6833;
+  border-color: #0d6833;
   color: #fff
 }
 .fd-button--action-bar.fd-button--positive.is-active,
@@ -483,8 +483,8 @@
 .fd-button--main.fd-button--positive[aria-pressed=true],
 .fd-button--main.fd-button--positive[aria-selected=true] {
   color: #fff;
-  background-color: #287635;
-  border-color: #287635
+  background-color: #0b5b2d;
+  border-color: #0b5b2d
 }
 .fd-button--action-bar.fd-button--positive.is-disabled,
 .fd-button--action-bar.fd-button--positive:disabled,
@@ -492,7 +492,7 @@
 .fd-button--main.fd-button--positive.is-disabled,
 .fd-button--main.fd-button--positive:disabled,
 .fd-button--main.fd-button--positive[aria-disabled=true] {
-  background-color: #359c46;
+  background-color: #118843;
   color: #fff
 }
 .fd-button--action-bar.fd-button--negative,
@@ -742,11 +742,13 @@
   color: #32363a;
   font-family: '72',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   position: relative;
-  display: inline-block
+  display: block
 }
 .fd-dropdown__control {
   position: relative;
-  margin-left: 0
+  margin-left: 0;
+  width: 100%;
+  text-align: left
 }
 .fd-dropdown__control::after {
   font-family: SAP-icons;
@@ -768,19 +770,66 @@
   transition: transform 125ms ease-in;
   transition: transform 125ms ease-in,-webkit-transform 125ms ease-in
 }
-.fd-dropdown__control.is-expanded::after,
-.fd-dropdown__control[aria-expanded=true]::after {
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1)
-}
-.fd-dropdown__control.is-disabled::after,
-.fd-dropdown__control[aria-disabled=true]::after,
-.fd-dropdown__control[disabled]::after {
-  -webkit-transform: none;
-  transform: none
+.fd-dropdown__control::after {
+  color: #0a6ed1;
+  width: 34px;
+  padding-top: 10px;
+  border-left: 1px solid #ceced0;
+  background: #fafafa;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px
 }
 .fd-dropdown__control--no-border {
   border: none
+}
+.fd-dropdown__control.fd-button--xs::after {
+  padding-top: 6px
+}
+.fd-dropdown__control.fd-button--s::after {
+  padding-top: 6px
+}
+.fd-dropdown__control.fd-button--compact::after {
+  padding-top: 8px
+}
+.fd-dropdown__control.fd-button--l::after {
+  width: 38px;
+  padding-top: 10px
+}
+.fd-dropdown__control.fd-button {
+  color: #32363a;
+  border-color: #ceced0
+}
+.fd-dropdown__control.fd-button:hover {
+  color: #32363a;
+  background-color: #fff;
+  border-color: #7bbaf9;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+.fd-dropdown__control.fd-button:active,
+.fd-dropdown__control.fd-button[aria-expanded=true] {
+  color: #32363a;
+  background-color: #fff;
+  border-color: #7bbaf9;
+  -webkit-box-shadow: 0 0 0 1px #7bbaf9;
+  box-shadow: 0 0 0 1px #7bbaf9
+}
+.fd-dropdown__control.fd-button--toolbar:active,
+.fd-dropdown__control.fd-button--toolbar:hover {
+  color: #515559;
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+.fd-dropdown__control.fd-button--toolbar::after {
+  color: #32363a;
+  background-color: transparent;
+  border-left: none
 }
 .fd-dropdown__menu {
   padding-top: 4px;
@@ -863,7 +912,7 @@
   margin-right: 0
 }
 .fd-form__group .fd-form__item {
-  margin-right: 24px
+  margin-right: 32px
 }
 .fd-form__group .fd-form__item:last-child {
   margin-bottom: 0;
@@ -941,13 +990,13 @@
   border: 0;
   color: #6f7275
 }
-.fd-form__label.is-required,
-.fd-form__legend.is-required {
-  font-weight: 700
-}
 .fd-form__label.is-required:after,
 .fd-form__legend.is-required:after {
   content: "*"
+}
+.fd-form__label.is-disabled,
+.fd-form__legend.is-disabled {
+  opacity: .4
 }
 .fd-form__control {
   min-width: 16px
@@ -982,11 +1031,11 @@
   width: 18px;
   height: 18px;
   font-style: normal;
+  font-size: 1.3em;
+  font-family: SAP-icons;
   position: absolute;
   left: 0;
   color: #fff;
-  border-radius: 50%;
-  background-color: #6f7275;
   text-align: center;
   line-height: 18px
 }
@@ -999,36 +1048,28 @@
 .fd-form__message--help::before,
 .fd-form__message--warning::before {
   left: 0;
-  top: 7px
+  top: 6px
 }
 .fd-form__message--help {
   color: #32363a
 }
 .fd-form__message--help::before {
-  content: "?"
+  color: #32363a;
+  content: ""
 }
 .fd-form__message--warning {
   color: #f59518
 }
 .fd-form__message--warning::before {
-  content: "!";
-  background-color: transparent;
-  border-radius: 0;
-  height: 0;
-  width: 0;
-  border-bottom: 18px solid #f59518;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  text-indent: -.15em;
-  line-height: 22px
+  color: #f59518;
+  content: ""
 }
 .fd-form__message--error {
   color: #e00
 }
 .fd-form__message--error::before {
-  content: "!";
-  background-color: #e00;
-  color: #fff
+  content: "";
+  color: #e00
 }
 /*!
 .fd-input-group+(--inline)
@@ -1084,7 +1125,7 @@
   padding: 0 12px;
   border-style: solid;
   border-width: 1px;
-  border-color: #dededf;
+  border-color: #ceced0;
   background-color: #fafafa;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1131,6 +1172,7 @@
 .fd-input-group--before input[type=search],
 .fd-input-group--before input[type=tel],
 .fd-input-group--before input[type=text],
+.fd-input-group--before input[type=time],
 .fd-input-group--before input[type=url] {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0
@@ -1142,6 +1184,7 @@
 .fd-input-group--after input[type=search],
 .fd-input-group--after input[type=tel],
 .fd-input-group--after input[type=text],
+.fd-input-group--after input[type=time],
 .fd-input-group--after input[type=url] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0
@@ -1190,12 +1233,12 @@
   top: -2px
 }
 .fd-input-group__button--step-up {
-  border-bottom: solid 1px #dededf;
+  border-bottom: solid 1px #ceced0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0
 }
 .fd-input-group__button--step-down {
-  border-top: solid 1px #dededf;
+  border-top: solid 1px #ceced0;
   border-top-left-radius: 0;
   border-top-right-radius: 0
 }
@@ -1229,7 +1272,7 @@
   padding-right: 8px
 }
 .fd-label--success {
-  color: #359c46
+  color: #118843
 }
 .fd-label--warning {
   color: #f59518
@@ -1363,18 +1406,18 @@
 .fd-table td,
 .fd-table th {
   text-align: left;
-  padding: 12px 12px;
+  padding: 12px 16px;
   border-style: solid;
   border-width: 0;
   border-color: transparent
 }
 .fd-table td:first-child,
 .fd-table th:first-child {
-  padding-left: 24px
+  padding-left: 32px
 }
 .fd-table td:last-child,
 .fd-table th:last-child {
-  padding-right: 24px
+  padding-right: 32px
 }
 .fd-table td .fd-dropdown__menu,
 .fd-table th .fd-dropdown__menu {
@@ -1480,7 +1523,7 @@
 .fd-modal__header {
   position: relative;
   border-bottom: 1px solid #eeeeef;
-  padding: 16px 24px
+  padding: 16px 32px
 }
 .fd-modal__title {
   font-size: 1.14286rem;
@@ -1535,7 +1578,7 @@
   line-height: 1
 }
 .fd-modal__body {
-  padding: 16px 24px;
+  padding: 16px 32px;
   max-height: calc(100vh - 60px - 68px);
   overflow-y: auto
 }
@@ -1543,7 +1586,7 @@
   padding: 0
 }
 .fd-modal__footer {
-  padding: 16px 24px;
+  padding: 16px 32px;
   text-align: right;
   border-top: 1px solid #eeeeef
 }
@@ -1600,7 +1643,7 @@
   list-style: none
 }
 .fd-tree__row {
-  padding: 0 24px;
+  padding: 0 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2022,13 +2065,23 @@
   display: none
 }
 .fd-toggle input:checked {
-  background-color: #0a6ed1;
-  opacity: .6
+  background-color: #0a6ed1
 }
 .fd-toggle input:checked + .fd-toggle__switch {
   left: calc(100% - 28px);
   background: #0854a0;
   border-color: #0854a0
+}
+.fd-toggle input:checked.is-disabled,
+.fd-toggle input:checked[aria-disabled=true],
+.fd-toggle input:checked[disabled] {
+  background-color: rgba(10,110,209,.08)
+}
+.fd-toggle input:checked.is-disabled + .fd-toggle__switch,
+.fd-toggle input:checked[aria-disabled=true] + .fd-toggle__switch,
+.fd-toggle input:checked[disabled] + .fd-toggle__switch {
+  border-color: transparent;
+  background-color: #d8ebfd
 }
 .fd-toggle input:hover {
   border-color: transparent
@@ -2040,14 +2093,17 @@
 .fd-toggle input.is-disabled,
 .fd-toggle input[aria-disabled=true],
 .fd-toggle input[disabled] {
-  opacity: .4;
-  border-color: transparent
+  opacity: 1;
+  background-color: #ededee
 }
 .fd-toggle input.is-disabled + .fd-toggle__switch,
 .fd-toggle input[aria-disabled=true] + .fd-toggle__switch,
 .fd-toggle input[disabled] + .fd-toggle__switch {
-  border-color: transparent;
-  background-color: #eeeeef
+  opacity: 1;
+  border-color: #ededee;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #fff
 }
 .fd-toggle--xs {
   height: 20px;
@@ -2056,6 +2112,9 @@
 .fd-toggle--xs .fd-toggle__switch {
   height: 20px;
   width: 20px
+}
+.fd-toggle--xs .fd-toggle__label {
+  padding-left: 46px
 }
 .fd-toggle--xs input {
   border-radius: 10px
@@ -2071,6 +2130,9 @@
   height: 24px;
   width: 24px
 }
+.fd-toggle--s .fd-toggle__label {
+  padding-left: 50px
+}
 .fd-toggle--s input {
   border-radius: 12px
 }
@@ -2084,6 +2146,9 @@
 .fd-toggle--l .fd-toggle__switch {
   height: 32px;
   width: 32px
+}
+.fd-toggle--l .fd-toggle__label {
+  padding-left: 66px
 }
 .fd-toggle--l input {
   border-radius: 16px
@@ -2330,7 +2395,7 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 }
 .fd-global-nav__launchpad button {
   min-height: 48px;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMyMTI2MkMiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNi4yMzYgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzYuMjM2IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzYgMzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM2IDM2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZBRkJGQzt9LnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiNDRUNFRDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5zdDJ7ZmlsbDojMEE2RUQxO30uc3Qze2ZvbnQtZmFtaWx5OidTQVAtaWNvbnMnO30uc3Q0e2ZvbnQtc2l6ZToxNnB4O308L3N0eWxlPjxyZWN0IHg9IjAiIGNsYXNzPSJzdDAiIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNS45Ii8+PGxpbmUgY2xhc3M9InN0MSIgeDE9IjAuNCIgeTE9IjAuMSIgeDI9IjAuNCIgeTI9IjM1LjkiLz48ZyBpZD0iTXVsdGktSW5wdXQiPjxnIGlkPSJGdW5kYW1lbnRhbF9Nb2R1bGFyX1VJX011dGxpLUlucHV0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzY2LjAwMDAwMCwgLTIwMi4wMDAwMDApIj48ZyBpZD0iU2VsZWN0RmllbGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcwLjAwMDAwMCwgMTAzLjAwMDAwMCkiPjxnIGlkPSJJbnB1dCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDYyLjAwMDAwMCkiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMzA4LjAwMDIgNjAuOTIxOSkiIGNsYXNzPSJzdDIgc3QzIHN0NCI+7oevPC90ZXh0PjwvZz48L2c+PC9nPjwvZz48L3N2Zz4=);
   background-repeat: no-repeat;
   background-position: calc(100% - 12px) center;
   padding-right: 30px;
@@ -2357,7 +2422,12 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 }
 .fd-global-nav__context-menu button {
   min-height: 48px;
-  color: #515559
+  color: #515559;
+  background: 0 0;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0
 }
 .fd-global-nav__actions {
   display: inline-block
@@ -2398,7 +2468,7 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 */
 .fd-side-nav {
   background-color: #fff;
-  min-width: 250px;
+  min-width: 249px;
   margin: 0;
   padding: 0
 }
@@ -2471,7 +2541,7 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   color: #6f7275
 }
 .fd-side-nav__link.has-child {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMyMTI2MkMiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNi4yMzYgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzYuMjM2IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzYgMzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM2IDM2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZBRkJGQzt9LnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiNDRUNFRDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5zdDJ7ZmlsbDojMEE2RUQxO30uc3Qze2ZvbnQtZmFtaWx5OidTQVAtaWNvbnMnO30uc3Q0e2ZvbnQtc2l6ZToxNnB4O308L3N0eWxlPjxyZWN0IHg9IjAiIGNsYXNzPSJzdDAiIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNS45Ii8+PGxpbmUgY2xhc3M9InN0MSIgeDE9IjAuNCIgeTE9IjAuMSIgeDI9IjAuNCIgeTI9IjM1LjkiLz48ZyBpZD0iTXVsdGktSW5wdXQiPjxnIGlkPSJGdW5kYW1lbnRhbF9Nb2R1bGFyX1VJX011dGxpLUlucHV0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzY2LjAwMDAwMCwgLTIwMi4wMDAwMDApIj48ZyBpZD0iU2VsZWN0RmllbGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcwLjAwMDAwMCwgMTAzLjAwMDAwMCkiPjxnIGlkPSJJbnB1dCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDYyLjAwMDAwMCkiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMzA4LjAwMDIgNjAuOTIxOSkiIGNsYXNzPSJzdDIgc3QzIHN0NCI+7oevPC90ZXh0PjwvZz48L2c+PC9nPjwvZz48L3N2Zz4=);
   background-repeat: no-repeat;
   background-position: calc(100% - 12px) center
 }
@@ -3038,8 +3108,8 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
           .fd-calendar__item(+[--other-month,--current,--disabled,--blocked],[is-selected,is-selected-range, is-selected-range-first,is-selected-range-last])
             .fd-calendar__text
 */
-.fd-calendar__column-header,
-.fd-calendar__item {
+.fd-calendar .fd-calendar__column-header,
+.fd-calendar .fd-calendar__item {
   font-size: .92857rem;
   line-height: 1.23077;
   font-weight: 400;
@@ -3061,30 +3131,30 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   -ms-flex-pack: center;
   justify-content: center
 }
-.fd-calendar__column-header:hover,
-.fd-calendar__item:hover {
+.fd-calendar .fd-calendar__column-header:hover,
+.fd-calendar .fd-calendar__item:hover {
   cursor: pointer;
   background-color: #fafafa
 }
-.fd-calendar__item--other-month {
+.fd-calendar .fd-calendar__item--other-month {
   color: #b0b6bb
 }
-.fd-calendar__item--disabled,
-.fd-calendar__item.is-disabled,
-.fd-calendar__item[aria-disabled=true] {
+.fd-calendar .fd-calendar__item--disabled,
+.fd-calendar .fd-calendar__item.is-disabled,
+.fd-calendar .fd-calendar__item[aria-disabled=true] {
   color: #e7e9ea
 }
-.fd-calendar__item--disabled:hover,
-.fd-calendar__item.is-disabled:hover,
-.fd-calendar__item[aria-disabled=true]:hover {
+.fd-calendar .fd-calendar__item--disabled:hover,
+.fd-calendar .fd-calendar__item.is-disabled:hover,
+.fd-calendar .fd-calendar__item:hover[aria-disabled=true] {
   cursor: not-allowed;
   background-color: #fff
 }
-.fd-calendar__item--current {
+.fd-calendar .fd-calendar__item--current {
   position: relative;
   color: #0854a0
 }
-.fd-calendar__item--current::after {
+.fd-calendar .fd-calendar__item--current::after {
   content: "";
   position: absolute;
   top: 0;
@@ -3094,36 +3164,36 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   border: solid 2px #7bbaf9;
   border-radius: 4px
 }
-.fd-calendar__item--blocked,
-.fd-calendar__item.is-blocked {
+.fd-calendar .fd-calendar__item--blocked,
+.fd-calendar .fd-calendar__item.is-blocked {
   text-decoration: line-through;
   color: #32363a
 }
-.fd-calendar__item--blocked:hover,
-.fd-calendar__item.is-blocked:hover {
+.fd-calendar .fd-calendar__item--blocked:hover,
+.fd-calendar .fd-calendar__item.is-blocked:hover {
   cursor: not-allowed;
   background-color: #fff
 }
-.fd-calendar__item.is-selected {
+.fd-calendar .fd-calendar__item.is-selected {
   background-color: #0854a0;
   color: #fff
 }
-.fd-calendar__item.is-selected-range {
+.fd-calendar .fd-calendar__item.is-selected-range {
   background-color: rgba(8,84,160,.07);
   border-radius: 0
 }
-.fd-calendar__item.is-selected-range-first {
+.fd-calendar .fd-calendar__item.is-selected-range-first {
   border-radius: 4px 0 0 4px
 }
-.fd-calendar__item.is-selected-range-last {
+.fd-calendar .fd-calendar__item.is-selected-range-last {
   border-radius: 0 4px 4px 0
 }
-.is-hidden.fd-calendar__dates,
-.is-hidden.fd-calendar__months,
-.is-hidden.fd-calendar__years,
-[aria-hidden=true].fd-calendar__dates,
-[aria-hidden=true].fd-calendar__months,
-[aria-hidden=true].fd-calendar__years {
+.fd-calendar .fd-calendar__dates[aria-hidden=true],
+.fd-calendar .fd-calendar__months[aria-hidden=true],
+.fd-calendar .fd-calendar__years[aria-hidden=true],
+.fd-calendar .is-hidden.fd-calendar__dates,
+.fd-calendar .is-hidden.fd-calendar__months,
+.fd-calendar .is-hidden.fd-calendar__years {
   display: none
 }
 .fd-calendar {
@@ -3133,13 +3203,13 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   font-family: '72',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   width: 252px
 }
-.fd-calendar__months {
+.fd-calendar .fd-calendar__months {
   display: grid
 }
-.fd-calendar__years {
+.fd-calendar .fd-calendar__years {
   display: grid
 }
-.fd-calendar__header {
+.fd-calendar .fd-calendar__header {
   -webkit-box-shadow: inset 0 -1px 0 0 #eeeeef;
   box-shadow: inset 0 -1px 0 0 #eeeeef;
   height: 52px;
@@ -3150,10 +3220,10 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   -ms-flex-align: center;
   align-items: center
 }
-.fd-calendar__content {
+.fd-calendar .fd-calendar__content {
   padding: 12px 0
 }
-.fd-calendar__navigation {
+.fd-calendar .fd-calendar__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3167,32 +3237,33 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   -ms-flex-align: center;
   align-items: center
 }
-.fd-calendar__table {
+.fd-calendar .fd-calendar__table {
   display: table;
   border-collapse: collapse
 }
-.fd-calendar__table .fd-calendar__item {
+.fd-calendar .fd-calendar__table .fd-calendar__item {
   display: table-cell
 }
-.fd-calendar__group {
+.fd-calendar .fd-calendar__group {
   display: table-row-group
 }
-.fd-calendar__row {
+.fd-calendar .fd-calendar__row {
   display: table-row
 }
-.fd-calendar__column-header {
-  display: table-cell
+.fd-calendar .fd-calendar__column-header {
+  display: table-cell;
+  vertical-align: middle
 }
-.fd-calendar__column-header:hover {
+.fd-calendar .fd-calendar__column-header:hover {
   cursor: default;
-  background-color: transparent
+  background-color: #fff
 }
-.fd-calendar__list {
+.fd-calendar .fd-calendar__list {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4,1fr)
 }
-.fd-calendar__day-of-week {
+.fd-calendar .fd-calendar__day-of-week {
   font-size: .78571rem;
   line-height: 1.45455;
   font-weight: 400;
@@ -3242,7 +3313,7 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   top: 1px;
   left: 0;
   z-index: 1;
-  background-color: #359c46
+  background-color: #118843
 }
 .fd-status-label--away:before {
   position: absolute;
@@ -3320,7 +3391,7 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   background-color: #515559
 }
 .fd-status-label--success {
-  color: #359c46
+  color: #118843
 }
 .fd-status-label--warning {
   color: #f59518
@@ -3333,8 +3404,7 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   line-height: 1.42857;
   color: #32363a;
   font-family: '72',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-  position: relative;
-  display: inline-block
+  position: relative
 }
 .fd-popover__control {
   position: relative;
@@ -3343,7 +3413,7 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 }
 .fd-popover__body {
   min-width: 100%;
-  border: solid 1px #dededf;
+  border: solid 1px #ceced0;
   position: absolute;
   white-space: nowrap;
   z-index: 2;
