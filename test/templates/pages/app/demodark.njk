@@ -1,0 +1,45 @@
+{% extends "./../layouts/demoshell.njk" %}
+{% import "../../layout/component.njk" as layout %}
+
+{% set hide_app_sidebar = true %}
+
+{% set dark_core_sass = true %}
+
+{% block page_content %}
+
+    <table class="fd-table">
+        <thead>
+            <tr>
+                <th>Header</th>
+                <th>Column Header</th>
+                <th>Column Header</th>
+                <th>Column Header</th>
+                <th>Column Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet ipsum</td>
+                <td>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet</td>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet ipsum</td>
+                <td>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet</td>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet ipsum</td>
+                <td>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet</td>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

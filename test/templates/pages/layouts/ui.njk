@@ -13,8 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ id }}</title>
     <style media="screen">
-    {% set core_sass = 'all.scss' %}
-    {{ core_sass | sass_to_css }}
+        {% set core_sass = 'all.scss' %}
+        {{ core_sass | sass_to_css }}
+
+        {% if dark_core_sass == true %}
+            {% set core_sass = 'all-dark.scss' %}
+            {{ core_sass | sass_to_css }}
+        {%- endif %}
     </style>
 </head>
 <body>

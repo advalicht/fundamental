@@ -1,0 +1,118 @@
+{% extends "./demopage.njk" %}
+{% from "./../../side-nav/component.njk" import side_nav %}
+{% from "./../../action-bar/component.njk" import action_bar %}
+{% from "./../../button/component.njk" import button %}
+{% from "./../../breadcrumb/component.njk" import breadcrumb %}
+{% from "./../../global-nav/component.njk" import global_nav %}
+
+{% set hide_ui_footer = true %}
+
+{% block ui_header %}
+    <nav class="fd-global-nav">
+        <div class="fd-global-nav__group fd-global-nav__group--left">
+            <div class="fd-global-nav__logo fd-has-margin-left-none"></div>
+            <div class="fd-global-nav__product-name">Customer Recovery</div>
+        </div>
+        <!-- <div class="fd-global-nav__group fd-global-nav__launchpad"></div> -->
+        <div class="fd-global-nav__group fd-global-nav__group--right">
+            <div class="fd-global-nav__actions">
+                <div class="fd-global-nav__search">
+                    <button class=" fd-button--secondary fd-button--m sap-icon--search fd-global-nav__btn" aria-label="BUTTON_LABEL" aria-controls="Llgum531" aria-haspopup="true" aria-expanded="false"></button>
+                    <input type="text" class="fd-form__control" id="Llgum531" aria-hidden="true" placeholder="Search... ">
+                </div>
+                <button class=" fd-button--secondary fd-button--m fd-global-nav__btn" aria-label="BUTTON_LABEL"><span class=" fd-identifier--s fd-identifier--circle">WW</span></button>
+                
+
+                <div class="fd-global-nav__wafflemenu">
+                    <div class="fd-popover__control">
+                        <button class="fd-button--secondary fd-button--m sap-icon--grid fd-global-nav__btn" aria-label="BUTTON_LABEL" aria-controls="Bn8Xe333" aria-expanded="false" aria-haspopup="true" ></button>
+                    </div>
+                    <div class="fd-popover__body fd-global-nav__wafflebody" aria-hidden="true" id="Bn8Xe333">
+                        <nav class="fd-wafflemenu">
+                            <ul>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/01.png" /></span>
+                                    <span class="fd-wafflemenu-title">Fiori Home</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/02.png" /></span>
+                                    <span class="fd-wafflemenu-title">S/4 HANA Cloud</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/03.png" /></span>
+                                    <span class="fd-wafflemenu-title">Analytics Cloud</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/04.png" /></span>
+                                    <span class="fd-wafflemenu-title">Ariba</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/05.png" /></span>
+                                    <span class="fd-wafflemenu-title">SuccessFactors</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/06.png" /></span>
+                                    <span class="fd-wafflemenu-title">Hybris</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/07.png" /></span>
+                                    <span class="fd-wafflemenu-title">Gigya</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/08.png" /></span>
+                                    <span class="fd-wafflemenu-title">Callidus Cloud</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/09.png" /></span>
+                                    <span class="fd-wafflemenu-title">Fieldglass</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/10.png" /></span>
+                                    <span class="fd-wafflemenu-title">Concur</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/11.png" /></span>
+                                    <span class="fd-wafflemenu-title">Cloud for Customer</span>
+                                </li>
+                                <li>
+                                    <span class="fd-wafflemenu-icon"><img src="/static/waffle/12.png" /></span>
+                                    <span class="fd-wafflemenu-title">Cloud Portal</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </nav>
+{% endblock %}
+
+
+{% block page_header %}
+    <ul class="fd-tabs" role="tablist">
+        <li class="fd-tabs__item">
+            <a class="fd-tabs__link" aria-controls="home" aria-selected="true" href="#home" role="tab">Home</a>
+        </li>
+        <li class="fd-tabs__item">
+            <a class="fd-tabs__link" aria-controls="commerce" href="#commerce" role="tab">Commerce</a>
+        </li>
+        <li class="fd-tabs__item">
+            <a class="fd-tabs__link" aria-controls="sales" href="#sales" role="tab">Sales</a>
+        </li>
+        <li class="fd-tabs__item">
+            <a class="fd-tabs__link" aria-controls="customer-data" href="#customer-data" role="tab">Customer Data</a>
+        </li>
+    </ul>
+    <!--<div class="fd-tabs__panel" aria-expanded="false" id="home" role="tabpanel">
+        Lorem ipsum
+    </div>
+    <div class="fd-tabs__panel" aria-expanded="true" id="commerce" role="tabpanel">
+        Dolor sit
+    </div>
+    <div class="fd-tabs__panel" aria-expanded="false" id="sales" role="tabpanel">
+        Nullam ut
+    </div>
+    <div class="fd-tabs__panel" aria-expanded="false" id="customer-data" role="tabpanel">
+        Tincidunt nunc
+    </div>-->
+{% endblock %}
