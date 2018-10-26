@@ -20,7 +20,7 @@ $block: #{$fd-namespace}-form;
     $fd-form-message-font-size: -1 !default;
     $fd-form-message-color: fd-color(text, 2) !default;
     $fd-form-item-gutter: var(--fd-width-gutter) !default;
-    $fd-form-item-margin-bottom: fd-space(5) !default;
+    $fd-form-item-margin-bottom: fd-space("small") !default;
 
     @include fd-reset;
     &__group {
@@ -33,6 +33,9 @@ $block: #{$fd-namespace}-form;
     }
     &__set {
         margin-bottom: $fd-form-item-margin-bottom;
+        &:last-child {
+          margin-bottom: 0
+        }
         .#{$block}__item {
             &--inline {
                 @include fd-screen(s) {
@@ -99,7 +102,7 @@ $block: #{$fd-namespace}-form;
         min-width: $fd-forms-height--input-check;
     }
     &__legend {
-        margin-bottom: fd-space(5);
+        margin-bottom: fd-space("tiny");
     }
     &__help {
         float: right;
