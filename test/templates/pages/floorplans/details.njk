@@ -158,7 +158,7 @@
     {% call form_set(properties={
             legend: "Label"
         }) %}
-{{ form_item("toggle", { label: "Inventory type" }) }}
+{{ form_item("toggle", { label: "Off" }) }}
     {% endcall %}
     {%- endcall %}
   {%- endcall %}
@@ -175,7 +175,7 @@
       {% call form_set(properties={
               legend: "Label"
           }) %}
-  {{ form_item("toggle", { label: "Inventory type" },state={ checked: true }) }}
+  {{ form_item("toggle", { label: "On" },state={ checked: true }) }}
       {% endcall %}
     {%- endcall %}
   {%- endcall %}
